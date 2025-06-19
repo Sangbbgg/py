@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import messagebox, filedialog, ttk
-import os
 from datetime import datetime
 import csv
 
@@ -220,7 +219,7 @@ class ExcelCreator:
             file_path = filedialog.asksaveasfilename(
                 defaultextension=".xlsx",
                 filetypes=[("Excel files", "*.xlsx"), ("All files", "*.*")],
-                initialvalue=filename
+                initialfile=filename
             )
             
             if not file_path:
@@ -274,7 +273,7 @@ class ExcelCreator:
             file_path = filedialog.asksaveasfilename(
                 defaultextension=".csv",
                 filetypes=[("CSV files", "*.csv"), ("All files", "*.*")],
-                initialvalue=filename
+                initialfile=filename
             )
             
             if not file_path:
